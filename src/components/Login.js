@@ -51,6 +51,15 @@ function Login({ setUser }) {
           <button onClick={handleLogin} className="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 dark:hover:bg-blue-400 transition-colors duration-300">
             Login
           </button>
+          <div>
+            <h1 className=" bg-gradient-to-r from-pink-500 font-medium via-yellow-500 to-blue-500 text-transparent bg-clip-text">
+              Username : <span className="dark:text-white  font-bold italic">user</span>
+            </h1>
+            <h1 className=" bg-gradient-to-r  from-pink-500 font-medium via-yellow-500 to-blue-500 text-transparent bg-clip-text">
+              Password : <span className="dark:text-white  font-bold italic">pass</span>
+            </h1>
+          </div>
+
           {error && <p className="text-red-600 dark:text-red-400 mt-2 text-center">{error}</p>}
         </div>
       </div>
