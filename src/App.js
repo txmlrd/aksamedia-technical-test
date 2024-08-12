@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <Navbar user={user ? user.name : null} onLogout={handleLogout} />
+
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Login setUser={setUser} />} />

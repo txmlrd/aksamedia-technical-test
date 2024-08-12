@@ -13,7 +13,7 @@ function Dashboard() {
   // }, [navigate]);
 
   return (
-    <div>
+    <div className="p-6 bg-white dark:bg-[#0f0f0f] h-screen shadow-md transition-colors duration-300">
       <CRUD />
     </div>
   );

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const staticUsername = "user";
 const staticPassword = "pass";
-const staticName = "Adhi";
+const staticName = "Gung Adhi";
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -30,16 +30,28 @@ function Login({ setUser }) {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen dark:bg-[#1f1f1f]">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-[500px]">
-        <h1 className="text-2xl font-bold mb-4">Login</h1>
-        <div className="flex flex-col space-y-5">
-          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="border p-2 mb-4 w-full" />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border p-2 mb-4 w-full" />
-          <button onClick={handleLogin} className="bg-blue-500 text-white px-4 py-2 rounded">
+    <div className="flex flex-col items-center justify-center min-h-screen dark:bg-[#121212] bg-[#f0f0f0] transition-colors duration-300">
+      <div className="bg-white dark:bg-[#1f1f1f] p-8 rounded-lg shadow-lg w-[400px]">
+        <h1 className="text-3xl dark:text-white text-[#333] font-semibold mb-6 text-center">Login</h1>
+        <div className="flex flex-col space-y-4">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="border border-gray-300 dark:border-gray-600 p-3 mb-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all duration-300"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="border border-gray-300 dark:border-gray-600 p-3 mb-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all duration-300"
+          />
+          <button onClick={handleLogin} className="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 dark:hover:bg-blue-400 transition-colors duration-300">
             Login
           </button>
-          {error && <p className="text-red-500 mt-2">{error}</p>}
+          {error && <p className="text-red-600 dark:text-red-400 mt-2 text-center">{error}</p>}
         </div>
       </div>
     </div>
