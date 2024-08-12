@@ -30,8 +30,8 @@ function Login({ setUser }) {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen dark:bg-[#121212] bg-[#f0f0f0] transition-colors duration-300">
-      <div className="bg-white dark:bg-[#1f1f1f] p-8 rounded-lg shadow-lg w-[400px]">
+    <div className="flex flex-col  items-center justify-center min-h-screen dark:bg-[#121212] bg-[#f0f0f0] transition-colors duration-300">
+      <div className="bg-white dark:bg-[#1f1f1f] md:scale-100 scale-75 p-8 rounded-lg shadow-lg w-[400px]">
         <h1 className="text-3xl dark:text-white text-[#333] font-semibold mb-6 text-center">Login</h1>
         <div className="flex flex-col space-y-4">
           <input

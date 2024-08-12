@@ -57,7 +57,7 @@ function CRUD() {
   const paginatedItems = items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="container mx-auto p-6 dark:text-white">
+    <div className="container mx-auto p-6 dark:text-white ">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">CRUD</h1>
 
       <div className="mb-6 flex flex-col gap-4">

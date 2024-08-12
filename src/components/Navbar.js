@@ -52,9 +52,9 @@ function Navbar({ user, onLogout }) {
         <ul className="flex flex-col md:flex-row md:items-center justify-between md:space-x-4 w-full">
           <div className="flex flex-col space-y-1">
             <li className="flex-grow text-center md:text-left mb-4 md:mb-0">
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-transparent bg-clip-text">AksaMedia Technical Test</h1>
+              <h1 className="md:text-3xl text-2xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-transparent bg-clip-text">AksaMedia Technical Test</h1>
             </li>
-            <li className="flex space-x-2 mb-4 md:mb-0 justify-start">
+            <li className="flex space-x-2 mb-4 md:mb-0 justify-center md:justify-start">
               <button onClick={setDarkMode} className={`p-2 rounded-lg transition-colors duration-300 ${themeMode === "dark" ? "bg-gray-200 text-black" : "bg-transparent border border-white text-white hover:bg-gray-800"}`}>
                 Dark
               </button>
@@ -67,27 +67,30 @@ function Navbar({ user, onLogout }) {
             </li>
           </div>
 
-          <li className="flex items-center space-x-2 relative">
+          <li className="flex md:flex-row flex-col md:space-y-0 space-y-5 items-center mt-5 space-x-2 relative">
             {user ? (
-              <h1 className="text-lg mx-5">
-                Hai, <span className="bg-gradient-to-r font-bold italic from-pink-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text">{user}</span>
-              </h1>
-            ) : null}
+              <div className="flex md:flex-row flex-col space-y-2 md:space-y-0">
+                <h1 className="text-lg mx-5">
+                  Hai, <span className="bg-gradient-to-r font-bold italic from-pink-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text">{user}</span>
+                </h1>{" "}
+                <div className="flex flex-row space-x-4">
+                  <button onClick={handleEditUser} className="border border-white text-white font-bold rounded-lg p-1 px-2 hover:bg-gray-700 transition-colors duration-300">
+                    Edit User
+                  </button>
 
-            <button onClick={handleEditUser} className="border border-white text-white font-bold rounded-lg p-1 px-2 hover:bg-gray-700 transition-colors duration-300">
-              Edit User
-            </button>
-
-            <div className="relative group">
-              <button onClick={toggleNavbar} className="bg-transparent border border-white text-white font-bold rounded-lg p-1 px-2 hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
-                Dropdown
-              </button>
-              <div className="absolute right-0 mt-2 bg-[#1f1f1f] border border-gray-700 rounded-lg shadow-lg  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                <button onClick={handleLogout} className="w-full text-left p-2 text-red-500 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">
-                  Logout
-                </button>
+                  <div className="relative group">
+                    <button onClick={toggleNavbar} className="bg-transparent border border-white text-white font-bold rounded-lg p-1 px-2 hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
+                      Dropdown
+                    </button>
+                    <div className="absolute right-0 mt-2 bg-[#1f1f1f] border border-gray-700 rounded-lg shadow-lg  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+                      <button onClick={handleLogout} className="w-full text-left p-2 text-red-500 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-300">
+                        Logout
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : null}
           </li>
         </ul>
       </div>
