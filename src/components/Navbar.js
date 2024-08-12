@@ -90,7 +90,11 @@ function Navbar({ user, onLogout }) {
                   </div>
                 </div>
               </div>
-            ) : null}
+            ) : (
+              <a href="https://github.com/txmlrd/aksamedia-technical-test" target="/blank" className="border border-white text-white font-bold rounded-lg p-1 px-2 hover:bg-gray-700 transition-colors duration-300">
+                GitHub Link
+              </a>
+            )}
           </li>
         </ul>
       </div>
